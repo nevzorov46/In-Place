@@ -10,13 +10,21 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
-        return true
-    }
-
+               UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+               // Sets shadow (line below the bar) to a blank image
+               UINavigationBar.appearance().shadowImage = UIImage()
+               // Sets the translucent background color
+               UINavigationBar.appearance().backgroundColor = .clear
+               // Set translucent. (Default value is already true, so this can be removed if desired.)
+               UINavigationBar.appearance().isTranslucent = true
+               UINavigationBar.appearance().tintColor = .white
+               UINavigationBar.appearance().barTintColor = .white
+               UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+               return true
+        }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

@@ -9,20 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let vc = "settingsViewController"
+    let segueId = "openSettings"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
-  
-    
+
     @IBAction func settingButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let settingsViewController = storyboard.instantiateViewController(identifier: vc) as! SettingsViewController
-        navigationController?.pushViewController(settingsViewController, animated: true)
+        performSegue(withIdentifier: segueId, sender: nil)
     }
+    
+    
  
     
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F63DBAAE26572D5000854DD4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DBAAD26572D5000854DD4 /* SettingsViewController.swift */; };
+		F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */; };
 		F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6C82653B9FB00056550 /* AppDelegate.swift */; };
 		F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6CA2653B9FB00056550 /* SceneDelegate.swift */; };
 		F642C6CD2653B9FB00056550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6CC2653B9FB00056550 /* ViewController.swift */; };
@@ -49,10 +49,12 @@
 		F642C72526540C4A00056550 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C70E26540C4900056550 /* SFUIText-Light.otf */; };
 		F642C72626540C4A00056550 /* SFUIText-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C70F26540C4900056550 /* SFUIText-Italic.otf */; };
 		F642C72726540C4A00056550 /* SFUIText-BoldG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C71026540C4A00056550 /* SFUIText-BoldG1.otf */; };
+		F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CF5265C62FD007A2B50 /* ShadowView.swift */; };
+		F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F63DBAAD26572D5000854DD4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F642C6C52653B9FB00056550 /* In-Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In-Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F642C6C82653B9FB00056550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F642C6CA2653B9FB00056550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		F642C70E26540C4900056550 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.otf"; sourceTree = "<group>"; };
 		F642C70F26540C4900056550 /* SFUIText-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Italic.otf"; sourceTree = "<group>"; };
 		F642C71026540C4A00056550 /* SFUIText-BoldG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-BoldG1.otf"; sourceTree = "<group>"; };
+		F6705CF5265C62FD007A2B50 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientedBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +134,15 @@
 			children = (
 				F642C6DD2653DD3700056550 /* Fonts */,
 				F642C6C82653B9FB00056550 /* AppDelegate.swift */,
+				F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */,
+				F6705CF5265C62FD007A2B50 /* ShadowView.swift */,
 				F642C6CA2653B9FB00056550 /* SceneDelegate.swift */,
 				F642C6CC2653B9FB00056550 /* ViewController.swift */,
-				F63DBAAD26572D5000854DD4 /* SettingsViewController.swift */,
 				F642C6CE2653B9FB00056550 /* Main.storyboard */,
 				F642C6D12653B9FF00056550 /* Assets.xcassets */,
 				F642C6D32653B9FF00056550 /* LaunchScreen.storyboard */,
 				F642C6D62653B9FF00056550 /* Info.plist */,
+				F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */,
 			);
 			path = "In-Place";
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */,
+				F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */,
 				F642C6CD2653B9FB00056550 /* ViewController.swift in Sources */,
 				F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */,
 				F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */,
-				F63DBAAE26572D5000854DD4 /* SettingsViewController.swift in Sources */,
+				F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
