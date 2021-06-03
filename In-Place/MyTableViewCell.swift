@@ -17,5 +17,6 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfBooking: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var placeDescription: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     
 }

@@ -12,9 +12,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var places: UITableView!
     
     let placesArray = [
-        Places(placeImage: "Image", placeName: "San-Francisko", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit", city: "San-Francisko"),
-        Places(placeImage: "Image", placeName: "San-Francisko", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit", city: "San-Francisko"),
-        Places(placeImage: "Image", placeName: "San-Francisko", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit", city: "San-Francisko")
+        Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
+        Places(placeImage: "Places Post 2", placeName: "Zagreb Restaurant", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 3 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "Zagreb"),
+        Places(placeImage: "Places Post 3", placeName: "London Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 30 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "London")
     ]
     
     let someDataFromNetwork = ["http", "protocol", "isConnect?"]
@@ -22,19 +22,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         placesArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyTableViewCell
+        let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Places", for: indexPath) as! MyTableViewCell
         
         let place = placesArray[indexPath.row]
         //cell.city.text = place.city
-        cell.placeImage?.image = UIImage(named: place.placeImage)
-        if indexPath.row == placesArray.count - 1 {
-            cell.placeImage?.isHidden = true
-        }
+        cell.placeImage.image = UIImage(named: place.placeImage)
+        cell.city.text = place.city
+        cell.placeDescription.text = place.placeDescription
+        cell.numberOfBooking.text = place.numberOfBooking
+        cell.placeName.text = place.placeName
         
-        else {
-            cell.placeImage?.isHidden = false
-        }
-
+       
         return cell
     }
 
@@ -53,9 +51,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     fileprivate func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
-        layer.colors = [UIColor.yellow.cgColor, UIColor.orange.cgColor]
-        layer.startPoint = CGPoint(x: 1.0, y: 1.0)
-        layer.endPoint = CGPoint(x: 0.0, y: 0.0)
+        layer.colors = [UIColor.red.cgColor, UIColor.white.cgColor]
+        layer.startPoint = CGPoint(x: 1.0, y: 0.0)
+        layer.endPoint = CGPoint(x: 1.0, y: 1.0)
         view.layer.insertSublayer(layer, at: 0)
     }
     
