@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var places: UITableView!
     
     let placesArray = [
-        Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
+        Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
         Places(placeImage: "Places Post 2", placeName: "Zagreb Restaurant", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 3 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "Zagreb"),
         Places(placeImage: "Places Post 3", placeName: "London Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 30 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "London")
     ]
@@ -42,6 +42,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         places.delegate = self
         places.dataSource = self
+        
+        places.estimatedRowHeight = 400
+        places.rowHeight = UITableView.automaticDimension
         
         addGradient()
 

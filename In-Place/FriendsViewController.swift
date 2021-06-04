@@ -8,8 +8,6 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
-    
-    @IBOutlet weak var friendsPost: UIImageView!
         
     override func viewDidLoad() {
         /*friendsPost.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
