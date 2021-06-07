@@ -7,16 +7,33 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController {
-        
+class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     override func viewDidLoad() {
-        /*friendsPost.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
-        friendsPost.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
-        friendsPost.layer.shadowOpacity = 1.0
-        friendsPost.layer.shadowRadius = 2.0
-        friendsPost.layer.masksToBounds = false
-        friendsPost.layer.cornerRadius = 4.0
-        */
-        
+        friendsInterests.delegate = self
+        friendsInterests.dataSource = self
+      //friendsInterests.rowHeight = 300
+      //friendsInterests.rowHeight = UITableView.automaticDimension
     }
+    
+    
+@IBOutlet weak var friendsInterests: UITableView!
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            let cell: FriendsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Friends", for: indexPath) as! FriendsTableViewCell
+            cell.placeName.text = "Liverpool"
+            return cell
+        default:
+            let cell: StroriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Stories", for:indexPath) as! StroriesTableViewCell
+              cell.storiesLabel.text = "Victory!"
+              return cell
+        }
+    }
+    
 }

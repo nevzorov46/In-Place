@@ -54,7 +54,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     fileprivate func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
-        layer.colors = [UIColor.red.cgColor, UIColor.white.cgColor]
+        layer.colors = [UIColor.orange.cgColor, UIColor.purple.cgColor]
         layer.startPoint = CGPoint(x: 1.0, y: 0.0)
         layer.endPoint = CGPoint(x: 1.0, y: 1.0)
         view.layer.insertSublayer(layer, at: 0)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */; };
+		F6171490266E462200F1930C /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617148F266E462200F1930C /* FriendsTableViewCell.swift */; };
+		F6171492266E56C200F1930C /* StroriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6171491266E56C200F1930C /* StroriesTableViewCell.swift */; };
+		F6171494266ED6C500F1930C /* ViewRepresenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6171493266ED6C500F1930C /* ViewRepresenation.swift */; };
 		F6234D8B266408A000F5CE0F /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6234D8A266408A000F5CE0F /* Places.swift */; };
 		F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6C82653B9FB00056550 /* AppDelegate.swift */; };
 		F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6CA2653B9FB00056550 /* SceneDelegate.swift */; };
@@ -58,6 +61,9 @@
 
 /* Begin PBXFileReference section */
 		F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F617148F266E462200F1930C /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		F6171491266E56C200F1930C /* StroriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroriesTableViewCell.swift; sourceTree = "<group>"; };
+		F6171493266ED6C500F1930C /* ViewRepresenation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresenation.swift; sourceTree = "<group>"; };
 		F6234D8A266408A000F5CE0F /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		F642C6C52653B9FB00056550 /* In-Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In-Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F642C6C82653B9FB00056550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F617148A266E3FD300F1930C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F642C6D32653B9FF00056550 /* LaunchScreen.storyboard */,
+				F642C6C82653B9FB00056550 /* AppDelegate.swift */,
+				F642C6CA2653B9FB00056550 /* SceneDelegate.swift */,
+				F642C6D62653B9FF00056550 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F617148B266E45CC00F1930C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F642C6CC2653B9FB00056550 /* ViewController.swift */,
+				F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */,
+				F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F617148C266E45E400F1930C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */,
+				F6705CF5265C62FD007A2B50 /* ShadowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F617148D266E45F000F1930C /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				F6234D8A266408A000F5CE0F /* Places.swift */,
+			);
+			name = Structures;
+			sourceTree = "<group>";
+		};
+		F617148E266E45FE00F1930C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */,
+				F617148F266E462200F1930C /* FriendsTableViewCell.swift */,
+				F6171491266E56C200F1930C /* StroriesTableViewCell.swift */,
+				F6171493266ED6C500F1930C /* ViewRepresenation.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F642C6BC2653B9FB00056550 = {
 			isa = PBXGroup;
 			children = (
@@ -138,20 +193,14 @@
 		F642C6C72653B9FB00056550 /* In-Place */ = {
 			isa = PBXGroup;
 			children = (
+				F617148E266E45FE00F1930C /* Cells */,
+				F617148D266E45F000F1930C /* Structures */,
+				F617148C266E45E400F1930C /* Views */,
+				F617148B266E45CC00F1930C /* View Controllers */,
+				F617148A266E3FD300F1930C /* Supporting Files */,
 				F642C6DD2653DD3700056550 /* Fonts */,
-				F642C6C82653B9FB00056550 /* AppDelegate.swift */,
-				F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */,
-				F6705CF5265C62FD007A2B50 /* ShadowView.swift */,
-				F642C6CA2653B9FB00056550 /* SceneDelegate.swift */,
-				F642C6CC2653B9FB00056550 /* ViewController.swift */,
 				F642C6CE2653B9FB00056550 /* Main.storyboard */,
 				F642C6D12653B9FF00056550 /* Assets.xcassets */,
-				F642C6D32653B9FF00056550 /* LaunchScreen.storyboard */,
-				F642C6D62653B9FF00056550 /* Info.plist */,
-				F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */,
-				F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */,
-				F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */,
-				F6234D8A266408A000F5CE0F /* Places.swift */,
 			);
 			path = "In-Place";
 			sourceTree = "<group>";
@@ -319,9 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6171494266ED6C500F1930C /* ViewRepresenation.swift in Sources */,
 				F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */,
 				F68D0FCD265FA20C005431BD /* MyTableViewCell.swift in Sources */,
 				F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */,
+				F6171492266E56C200F1930C /* StroriesTableViewCell.swift in Sources */,
+				F6171490266E462200F1930C /* FriendsTableViewCell.swift in Sources */,
 				F642C6CD2653B9FB00056550 /* ViewController.swift in Sources */,
 				F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */,
 				F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */,
