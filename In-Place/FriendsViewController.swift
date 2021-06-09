@@ -26,8 +26,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell: FriendsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Friends", for: indexPath) as! FriendsTableViewCell
-            cell.placeName.text = "Liverpool"
+            let cell: ViewRepresenation = tableView.dequeueReusableCell(withIdentifier: "ViewRepresentation", for: indexPath) as! ViewRepresenation
+            //cell.placeName.text = "Liverpool"
             return cell
         default:
             let cell: StroriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Stories", for:indexPath) as! StroriesTableViewCell
