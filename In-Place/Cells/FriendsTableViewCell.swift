@@ -9,16 +9,11 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var placeName: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postText: UILabel!
+    @IBOutlet weak var friendAvatarPost: UIImageView!
+    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var dateOfPost: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

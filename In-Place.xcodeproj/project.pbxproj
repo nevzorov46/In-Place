@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */; };
 		F6171490266E462200F1930C /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617148F266E462200F1930C /* FriendsTableViewCell.swift */; };
-		F6171492266E56C200F1930C /* StroriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6171491266E56C200F1930C /* StroriesTableViewCell.swift */; };
 		F6171494266ED6C500F1930C /* ViewRepresenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6171493266ED6C500F1930C /* ViewRepresenation.swift */; };
 		F6234D8B266408A000F5CE0F /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6234D8A266408A000F5CE0F /* Places.swift */; };
 		F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C6C82653B9FB00056550 /* AppDelegate.swift */; };
@@ -53,6 +52,8 @@
 		F642C72526540C4A00056550 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C70E26540C4900056550 /* SFUIText-Light.otf */; };
 		F642C72626540C4A00056550 /* SFUIText-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C70F26540C4900056550 /* SFUIText-Italic.otf */; };
 		F642C72726540C4A00056550 /* SFUIText-BoldG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = F642C71026540C4A00056550 /* SFUIText-BoldG1.otf */; };
+		F651634A26714F34009643C0 /* FriendsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651634926714F34009643C0 /* FriendsPost.swift */; };
+		F651634C26725171009643C0 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651634B26725171009643C0 /* PlaceViewController.swift */; };
 		F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CF5265C62FD007A2B50 /* ShadowView.swift */; };
 		F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */; };
 		F68D0FCD265FA20C005431BD /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */; };
@@ -62,7 +63,6 @@
 /* Begin PBXFileReference section */
 		F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F617148F266E462200F1930C /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
-		F6171491266E56C200F1930C /* StroriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroriesTableViewCell.swift; sourceTree = "<group>"; };
 		F6171493266ED6C500F1930C /* ViewRepresenation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresenation.swift; sourceTree = "<group>"; };
 		F6234D8A266408A000F5CE0F /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		F642C6C52653B9FB00056550 /* In-Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In-Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +108,8 @@
 		F642C70E26540C4900056550 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.otf"; sourceTree = "<group>"; };
 		F642C70F26540C4900056550 /* SFUIText-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Italic.otf"; sourceTree = "<group>"; };
 		F642C71026540C4A00056550 /* SFUIText-BoldG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-BoldG1.otf"; sourceTree = "<group>"; };
+		F651634926714F34009643C0 /* FriendsPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPost.swift; sourceTree = "<group>"; };
+		F651634B26725171009643C0 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		F6705CF5265C62FD007A2B50 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				F642C6CC2653B9FB00056550 /* ViewController.swift */,
 				F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */,
 				F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */,
+				F651634B26725171009643C0 /* PlaceViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F6234D8A266408A000F5CE0F /* Places.swift */,
+				F651634926714F34009643C0 /* FriendsPost.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -168,7 +172,6 @@
 			children = (
 				F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */,
 				F617148F266E462200F1930C /* FriendsTableViewCell.swift */,
-				F6171491266E56C200F1930C /* StroriesTableViewCell.swift */,
 				F6171493266ED6C500F1930C /* ViewRepresenation.swift */,
 			);
 			path = Cells;
@@ -372,14 +375,15 @@
 				F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */,
 				F68D0FCD265FA20C005431BD /* MyTableViewCell.swift in Sources */,
 				F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */,
-				F6171492266E56C200F1930C /* StroriesTableViewCell.swift in Sources */,
 				F6171490266E462200F1930C /* FriendsTableViewCell.swift in Sources */,
 				F642C6CD2653B9FB00056550 /* ViewController.swift in Sources */,
 				F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */,
 				F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */,
+				F651634C26725171009643C0 /* PlaceViewController.swift in Sources */,
 				F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */,
 				F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */,
 				F6234D8B266408A000F5CE0F /* Places.swift in Sources */,
+				F651634A26714F34009643C0 /* FriendsPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
