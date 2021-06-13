@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var places: UITableView!
     
     
-    var selectedPlace: Places? = nil
+    //var selectedPlace: Places? = nil
     
     let placesArray = [
         Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
@@ -35,19 +35,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.numberOfBooking.text = place.numberOfBooking
         cell.placeName.text = place.placeName
         
-       
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let place = placesArray[indexPath.row]
-        selectedPlace = place
+        //let place = placesArray[indexPath.row]
+        //selectedPlace = place
         performSegue(withIdentifier: "segue01", sender: nil)
         
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        
         if segue.identifier == "segue01",
            let vc = segue.destination as? PlaceViewController,
            let place = selectedPlace{
@@ -55,6 +57,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         }
     }
+ 
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
