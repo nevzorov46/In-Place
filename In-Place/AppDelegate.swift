@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                UINavigationBar.appearance().backgroundColor = .clear
                // Set translucent. (Default value is already true, so this can be removed if desired.)
                UINavigationBar.appearance().isTranslucent = true
-               UINavigationBar.appearance().tintColor = .white
-               UINavigationBar.appearance().barTintColor = .white
-               UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+               UINavigationBar.appearance().tintColor = .black
+               UINavigationBar.appearance().barTintColor = .black
+               UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
                return true
         }
     // MARK: UISceneSession Lifecycle

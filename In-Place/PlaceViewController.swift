@@ -9,8 +9,13 @@ import UIKit
 
 class PlaceViewController: UIViewController {
 
+
+    
+    // MARK: Outlets
     @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var placeText: UILabel!
+    @IBOutlet weak var placeName: UILabel!
+    @IBOutlet weak var placeDescription: UILabel!
+    
     
     var place: Places? = nil
     
@@ -18,9 +23,9 @@ class PlaceViewController: UIViewController {
         super.viewDidLoad()
         if let p = place {
             mainImageView.image = UIImage(named: p.placeImage)
-            placeText.text = p.placeDescription
+            placeDescription.text = p.placeDescription
+            placeName.text = p.placeName
         }
-
     }
 
 
