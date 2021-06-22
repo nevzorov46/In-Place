@@ -10,8 +10,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var places: UITableView!
-    var selectedPlace: Places? = nil
-
+    var selectedPlace: Places?
     let placesArray = [
         Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
         Places(placeImage: "Places Post 2", placeName: "Zagreb Restaurant", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 3 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "Zagreb"),
@@ -38,15 +37,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let place = placesArray[indexPath.row]
         selectedPlace = place
-        // Перед тем как вызвать segue я сохранил переменную
         performSegue(withIdentifier: "segue01", sender: nil)
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segue01", let vc = segue.destination as? PlaceViewController,
-            let place = selectedPlace {
+        if segue.identifier == "segue01", let vc = segue.destination as? PlaceViewController, let place = selectedPlace{
             vc.place = place
         }
     }

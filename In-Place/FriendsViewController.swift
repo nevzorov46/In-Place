@@ -7,8 +7,12 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    
+    
     @IBOutlet weak var friendsInterests: UITableView!
+    @IBOutlet weak var storiesCollection: UICollectionView!
     
     var friendsPost = [
         FriendsPost(image: "Friends Post 2", postText: "labellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabe", avatar: "Avatar 4", nickname: "Nelson Semedo", date: "21.06.2021"),
@@ -42,10 +46,23 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: FriendsStoriesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsStories", for: indexPath) as! FriendsStoriesCollectionViewCell
+        cell.story.image = UIImage(named: "avatar 2")
+        return cell
+    }
+    
     
     override func viewDidLoad() {
         friendsInterests.delegate = self
         friendsInterests.dataSource = self
+        
+        storiesCollection.delegate = self
+        storiesCollection.dataSource = self
     }
     
 }
