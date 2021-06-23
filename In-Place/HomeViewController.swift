@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let place = placesArray[indexPath.row]
         cell.placeImage.image = UIImage(named: place.placeImage)
+        cell.placeImage.sd_setImage(with: URL(string: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"), completed: nil)
         cell.city.text = place.city
         cell.placeDescription.text = place.placeDescription
         cell.numberOfBooking.text = place.numberOfBooking

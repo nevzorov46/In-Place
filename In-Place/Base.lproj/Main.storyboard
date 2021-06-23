@@ -117,7 +117,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsStories" id="D6t-6x-mac" customClass="FriendsStoriesCollectionViewCell" customModule="In_Place" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="10" width="98" height="98"/>
+                                                    <rect key="frame" x="10" y="15" width="98" height="98"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9iK-hC-CJL">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
@@ -750,7 +750,6 @@
                     </tabBarItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E1o-m2-l7M">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
