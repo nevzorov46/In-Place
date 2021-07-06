@@ -9,8 +9,6 @@ import UIKit
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    
-    
     @IBOutlet weak var friendsInterests: UITableView!
     @IBOutlet weak var storiesCollection: UICollectionView!
     

@@ -8,7 +8,9 @@
 import UIKit
 import SDWebImage
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyTableViewCellDelegate {
+    
+  
     
     @IBOutlet weak var places: UITableView!
     var selectedPlace: Places?
@@ -32,6 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.placeDescription.text = place.placeDescription
         cell.numberOfBooking.text = place.numberOfBooking
         cell.placeName.text = place.placeName
+        cell.delegate = self
         
         return cell
     }
@@ -42,6 +45,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "segue01", sender: nil)
         
     }
+    
+    func likeButtonClicked(cell: MyTableViewCell) {
+        if let indexPath = places.indexPath(for: cell) {
+            let place = placesArray[indexPath.row]
+            print(place.placeName)
+        }
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

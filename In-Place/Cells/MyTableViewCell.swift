@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MyTableViewCellDelegate: NSObject {
+    func likeButtonClicked(cell: MyTableViewCell)
+}
+
 class MyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var placeImage: UIImageView!
@@ -18,5 +22,13 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var placeDescription: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    
+    weak var delegate: MyTableViewCellDelegate?
+    
+    @IBAction func likeButtonClicked(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.likeButtonClicked(cell: self)
+        }
+    }
     
 }
