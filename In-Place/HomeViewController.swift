@@ -14,12 +14,49 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var places: UITableView!
     var selectedPlace: Places?
-    let placesArray = [
+    var placesArray: [Places] = [ /*
         Places(placeImage: "Places Post 1", placeName: "San-Francisko Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 15 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "San-Francisko"),
         Places(placeImage: "Places Post 2", placeName: "Zagreb Restaurant", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 3 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "Zagreb"),
         Places(placeImage: "Places Post 3", placeName: "London Bridge", avatar1: "avatar 1", avatar2: "avatar 2", avatar3: "avatar 3", numberOfBooking: "+ 30 people booked", placeDescription: "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel", city: "London")
+            */
     ]
     
+    
+    let stringURL = "https://gist.githubusercontent.com/alex-zykov/1d649549408ad875250d2789ca72e937/raw/c3a8437e47f0d8ba365ef426a0fa7502cd873248/posts.json"
+    
+    func getPlaces()  {
+ 
+        guard let url = URL(string: stringURL) else { return }
+        let task = URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            guard error == nil else {
+                print(error?.localizedDescription ?? "noDesc")
+                return
+            }
+            guard let data = data else { return }
+            //print(String(decoding: data, as: UTF8.self))
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            guard let place = try? decoder.decode([Places].self, from: data) else {
+                print("Error: can't parse Place")
+                return
+            }
+
+            print(place[0].placeName)
+            
+            self.placesArray = place
+            
+            DispatchQueue.main.async {
+                self.places.reloadData()
+            }
+        
+        }
+        
+        task.resume()
+    }
+
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         placesArray.count
@@ -28,11 +65,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Places", for: indexPath) as! MyTableViewCell
         
         let place = placesArray[indexPath.row]
-        cell.placeImage.image = UIImage(named: place.placeImage)
-        cell.placeImage.sd_setImage(with: URL(string: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"), completed: nil)
+        cell.placeImage.sd_setImage(with: URL(string: place.placeImages[0]), completed: nil)
         cell.city.text = place.city
         cell.placeDescription.text = place.placeDescription
-        cell.numberOfBooking.text = place.numberOfBooking
+       // cell.numberOfBooking.text = place.numberOfBooking
+        cell.numberOfBooking.text = String(place.bookings.numberOfBookings)
         cell.placeName.text = place.placeName
         cell.delegate = self
         
@@ -70,6 +107,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         places.rowHeight = UITableView.automaticDimension
         
         addGradient()
+        getPlaces()
 
     }
     

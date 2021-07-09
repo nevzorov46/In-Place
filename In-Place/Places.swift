@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct Places {
-    
-    var placeImage: String
+struct Places: Codable {
     var placeName: String
-    var avatar1: String
-    var avatar2: String
-    var avatar3: String
-    var numberOfBooking: String
     var placeDescription: String
+    var placeImages: [String]
     var city: String
-    
-    
-    
+    var liked: Bool
+    var bookings: Bookings
+   
+
+}
+
+struct Bookings: Codable {
+    var userAvatars: [String]
+    var numberOfBookings: Int
 }
