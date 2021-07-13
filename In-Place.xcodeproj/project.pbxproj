@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,6 +58,7 @@
 		F6705CF6265C62FD007A2B50 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CF5265C62FD007A2B50 /* ShadowView.swift */; };
 		F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */; };
 		F67AF0EF2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AF0EE2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift */; };
+		F68C721F269A06F700566B6E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C721E269A06F700566B6E /* NetworkService.swift */; };
 		F68D0FCD265FA20C005431BD /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */; };
 		F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		F6705CF5265C62FD007A2B50 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F67AF0EE2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F68C721E269A06F700566B6E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientedBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +150,6 @@
 				B09F0EAE66FC66B90F995081 /* Pods-In-Place.debug.xcconfig */,
 				3C806D1599CF6F8881414BF8 /* Pods-In-Place.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,6 +225,7 @@
 		F642C6C72653B9FB00056550 /* In-Place */ = {
 			isa = PBXGroup;
 			children = (
+				F68C721D269A06C000566B6E /* Services */,
 				F617148E266E45FE00F1930C /* Cells */,
 				F617148D266E45F000F1930C /* Structures */,
 				F617148C266E45E400F1930C /* Views */,
@@ -292,6 +294,14 @@
 				F642C70B26540C4900056550 /* SFUIText-SemiboldItalic.otf */,
 			);
 			path = SFText;
+			sourceTree = "<group>";
+		};
+		F68C721D269A06C000566B6E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F68C721E269A06F700566B6E /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +463,7 @@
 				F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */,
 				F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */,
 				F651634C26725171009643C0 /* PlaceViewController.swift in Sources */,
+				F68C721F269A06F700566B6E /* NetworkService.swift in Sources */,
 				F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */,
 				F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */,
 				F6234D8B266408A000F5CE0F /* Places.swift in Sources */,

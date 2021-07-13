@@ -21,16 +21,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             */
     ]
     
-    
+    /*
     let stringURL = "https://gist.githubusercontent.com/alex-zykov/1d649549408ad875250d2789ca72e937/raw/c3a8437e47f0d8ba365ef426a0fa7502cd873248/posts.json"
     
+    
+    // Если не указывается self , или [weak self]
     func getPlaces()  {
- 
         guard let url = URL(string: stringURL) else { return }
-        let task = URLSession.shared.dataTask(with: url) {
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { [weak self]
             (data, response, error) in
             guard error == nil else {
-                print(error?.localizedDescription ?? "noDesc")
+                print(error!.localizedDescription)
                 return
             }
             guard let data = data else { return }
@@ -42,21 +43,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Error: can't parse Place")
                 return
             }
-
-            print(place[0].placeName)
             
-            self.placesArray = place
+            print(place[0].placeName)
+            self?.placesArray = place
             
             DispatchQueue.main.async {
-                self.places.reloadData()
+                self?.places.reloadData()
             }
         
-        }
+        })
         
         task.resume()
     }
 
-   
+   */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         placesArray.count
@@ -90,8 +90,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue01", let vc = segue.destination as? PlaceViewController, let place = selectedPlace{
             vc.place = place
@@ -107,10 +105,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         places.rowHeight = UITableView.automaticDimension
         
         addGradient()
-        getPlaces()
-
+        
+        NetworkService.shared.getPlaces { placesOption in
+            guard let places = placesOption else {
+                print("Can not get Places")
+                return
+            }
+            self.placesArray = places
+           
+                DispatchQueue.main.async {
+                    self.places.reloadData()
+                
+            }
+        }
+ 
     }
-    
+
     fileprivate func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
