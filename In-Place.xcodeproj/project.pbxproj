@@ -59,7 +59,10 @@
 		F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */; };
 		F67AF0EF2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AF0EE2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift */; };
 		F68C721F269A06F700566B6E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C721E269A06F700566B6E /* NetworkService.swift */; };
+		F68CF33F270A087B00EF672D /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CF33E270A087B00EF672D /* SomeViewController.swift */; };
 		F68D0FCD265FA20C005431BD /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */; };
+		F6977D862719CB1A0080EBEF /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6977D852719CB1A0080EBEF /* PlaceTableViewCell.swift */; };
+		F6977D8A2719E5B70080EBEF /* ModalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6977D892719E5B70080EBEF /* ModalHeader.swift */; };
 		F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,7 +123,10 @@
 		F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F67AF0EE2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F68C721E269A06F700566B6E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F68CF33E270A087B00EF672D /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
 		F68D0FCC265FA20C005431BD /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F6977D852719CB1A0080EBEF /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		F6977D892719E5B70080EBEF /* ModalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHeader.swift; sourceTree = "<group>"; };
 		F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientedBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +177,7 @@
 				F61180D92657F8A5001FF7E8 /* FriendsViewController.swift */,
 				F6705CFC265D8CE6007A2B50 /* HomeViewController.swift */,
 				F651634B26725171009643C0 /* PlaceViewController.swift */,
+				F68CF33E270A087B00EF672D /* SomeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 			children = (
 				F6EEFEFB2657C59000ADA98F /* GradientedBackgroundView.swift */,
 				F6705CF5265C62FD007A2B50 /* ShadowView.swift */,
+				F6977D892719E5B70080EBEF /* ModalHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 				F617148F266E462200F1930C /* FriendsTableViewCell.swift */,
 				F6171493266ED6C500F1930C /* ViewRepresenation.swift */,
 				F67AF0EE2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift */,
+				F6977D852719CB1A0080EBEF /* PlaceTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -459,7 +468,9 @@
 				F6EEFEFC2657C59000ADA98F /* GradientedBackgroundView.swift in Sources */,
 				F6171490266E462200F1930C /* FriendsTableViewCell.swift in Sources */,
 				F642C6CD2653B9FB00056550 /* ViewController.swift in Sources */,
+				F68CF33F270A087B00EF672D /* SomeViewController.swift in Sources */,
 				F67AF0EF2680C4F8005861F7 /* FriendsStoriesCollectionViewCell.swift in Sources */,
+				F6977D8A2719E5B70080EBEF /* ModalHeader.swift in Sources */,
 				F642C6C92653B9FB00056550 /* AppDelegate.swift in Sources */,
 				F642C6CB2653B9FB00056550 /* SceneDelegate.swift in Sources */,
 				F651634C26725171009643C0 /* PlaceViewController.swift in Sources */,
@@ -467,6 +478,7 @@
 				F6705CFD265D8CE6007A2B50 /* HomeViewController.swift in Sources */,
 				F61180DA2657F8A5001FF7E8 /* FriendsViewController.swift in Sources */,
 				F6234D8B266408A000F5CE0F /* Places.swift in Sources */,
+				F6977D862719CB1A0080EBEF /* PlaceTableViewCell.swift in Sources */,
 				F651634A26714F34009643C0 /* FriendsPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

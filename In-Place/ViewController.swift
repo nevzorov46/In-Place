@@ -9,17 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let segueId = "openSettings"
+    //let segueId = "openSettings"
     
+    @IBOutlet weak var greenView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        greenView.isHidden = true
     }
 
+    /*
     @IBAction func settingButton(_ sender: Any) {
         performSegue(withIdentifier: segueId, sender: nil)
     }
-    
+    */
     
  
     

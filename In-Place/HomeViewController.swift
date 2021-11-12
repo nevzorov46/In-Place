@@ -10,8 +10,6 @@ import SDWebImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyTableViewCellDelegate {
     
-  
-    
     @IBOutlet weak var places: UITableView!
     var selectedPlace: Places?
     var placesArray: [Places] = [ /*
@@ -24,37 +22,37 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     /*
     let stringURL = "https://gist.githubusercontent.com/alex-zykov/1d649549408ad875250d2789ca72e937/raw/c3a8437e47f0d8ba365ef426a0fa7502cd873248/posts.json"
     
-    
-    // Если не указывается self , или [weak self]
-    func getPlaces()  {
-        guard let url = URL(string: stringURL) else { return }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { [weak self]
-            (data, response, error) in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            guard let data = data else { return }
-            //print(String(decoding: data, as: UTF8.self))
-            
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            guard let place = try? decoder.decode([Places].self, from: data) else {
-                print("Error: can't parse Place")
-                return
-            }
-            
-            print(place[0].placeName)
-            self?.placesArray = place
-            
-            DispatchQueue.main.async {
-                self?.places.reloadData()
-            }
         
-        })
-        
-        task.resume()
-    }
+        // Если не указывается self , или [weak self]
+        func getPlaces()  {
+            guard let url = URL(string: stringURL) else { return }
+            let task = URLSession.shared.dataTask(with: url, completionHandler: { [weak self]
+                (data, response, error) in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                guard let data = data else { return }
+                //print(String(decoding: data, as: UTF8.self))
+                
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                guard let place = try? decoder.decode([Places].self, from: data) else {
+                    print("Error: can't parse Place")
+                    return
+                }
+                
+                print(place[0].placeName)
+                self?.placesArray = place
+                
+                DispatchQueue.main.async {
+                    self?.places.reloadData()
+                }
+            
+            })
+            
+            task.resume()
+        }
 
    */
     
@@ -118,10 +116,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }
         }
+        
  
     }
 
-    fileprivate func addGradient() {
+    private func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
         layer.colors = [UIColor.orange.cgColor, UIColor.purple.cgColor]

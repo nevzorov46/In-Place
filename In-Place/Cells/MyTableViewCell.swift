@@ -11,6 +11,8 @@ protocol MyTableViewCellDelegate: NSObject {
     func likeButtonClicked(cell: MyTableViewCell)
 }
 
+
+// Custom
 class MyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var placeImage: UIImageView!
